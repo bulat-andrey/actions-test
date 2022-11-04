@@ -33,27 +33,25 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - name: RunLiquibaseCLICommands
+      - name: Liquibase prepare
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v2
       
       # Runs a set of commands using the runners shell
 
       - run: |
-          curl -L https://github.com/liquibase/liquibase/releases/download/v4.2.0/liquibase-4.2.0.zip --output liquibase-4.2.0.zip
-          unzip -o -d liquibase liquibase-4.2.0.zip
+          curl -L https://github.com/liquibase/liquibase/releases/download/v4.2.0/liquibase-4.2.0.zip --output liquibase-4.10.0.zip
+          unzip -o -d liquibase liquibase-4.10.0.zip
           cd test1
           echo "changeLogFile=changelog.xml" >> liquibase.properties
-          liquibase --log-level=INFO --url="jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul?user=admin1989&password=admin1989"  update
-        
+          
+      - name: Run Liquibase
+      - run: ../liquibase/liquibase --log-level=INFO --url="jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul?user=admin1989&password=admin1989"  update
         
     # Runs a single command using the runners shell
       - name: Send greeting
         run: echo "Hello ${{ github.event.inputs.master }}  ${{ github.event.inputs.community }} "
-      
-      
-      
-      
+           
       - name: Test ls  
         run: |
           ls
