@@ -12,7 +12,7 @@
 	     <sqlFile path="01-schema.sql" dbms="postgresql" encoding="UTF-8" relativeToChangelogFile="true"  splitStatements="false" endDelimiter=";" />
 	</changeSet>
 
-	<changeSet id="DMA_MIG#1" author="abulatov" failOnError="true">
+	<changeSet id="DMA_MIG#2" author="abulatov" failOnError="true">
 	     <comment> Install 1</comment>
 	     <sqlFile path="02-table.sql" dbms="postgresql" encoding="UTF-8" relativeToChangelogFile="true"  splitStatements="false" endDelimiter=";" />
 	</changeSet>
