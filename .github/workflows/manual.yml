@@ -55,4 +55,6 @@ jobs:
       
       
       - name: Test ls  
-        run: ls
+        run: |
+          ls
+          curl ifconfig.me
