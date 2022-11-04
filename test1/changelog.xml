@@ -13,7 +13,7 @@
 	</changeSet>
 
 	<changeSet id="DMA_MIG#2" author="abulatov" failOnError="true">
-	     <comment> Install 1</comment>
+	     <comment> Install 2</comment>
 	     <sqlFile path="02-table.sql" dbms="postgresql" encoding="UTF-8" relativeToChangelogFile="true"  splitStatements="false" endDelimiter=";" />
 	</changeSet>
 
