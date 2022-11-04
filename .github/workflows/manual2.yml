@@ -35,12 +35,12 @@ jobs:
       - name: Liquibase run
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       -  run: curl ifconfig.me
-      -  uses: actions/checkout@v2
-      -  uses: liquibase/liquibase-github-action@v7
-         with:
-            operation: 'update'
-            classpath: 'example/changelogs'
-            changeLogFile: 'samplechangelog.h2.sql'
-            username: admin1989
-            password: admin1989
-            url: jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul
+      #-  uses: actions/checkout@v2
+      #-  uses: liquibase/liquibase-github-action@v7
+         #with:
+            #operation: 'update'
+            #classpath: 'example/changelogs'
+            #changeLogFile: 'samplechangelog.h2.sql'
+            #username: admin1989
+            #password: admin1989
+            #url: jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul
