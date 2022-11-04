@@ -45,8 +45,8 @@ jobs:
           cd test1
           echo "changeLogFile=changelog.xml" >> liquibase.properties
           
-      - name: Run Liquibase
-      - run: ../liquibase/liquibase --log-level=INFO --url="jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul?user=admin1989&password=admin1989"  update
+      #- name: Run Liquibase
+      #- run: ../liquibase/liquibase --log-level=INFO --url="jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul?user=admin1989&password=admin1989"  update
         
     # Runs a single command using the runners shell
       - name: Send greeting
@@ -56,3 +56,4 @@ jobs:
         run: |
           ls
           curl ifconfig.me
+          ..\liquibase ls
