@@ -34,8 +34,10 @@ jobs:
 
       - name: Liquibase run
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        run: curl ifconfig.me
-      #-  uses: actions/checkout@v2
+        uses: actions/checkout@v2
+        
+      -  run: curl ifconfig.me
+        
       #-  uses: liquibase/liquibase-github-action@v7
          #with:
             #operation: 'update'
