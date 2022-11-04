@@ -45,6 +45,7 @@ jobs:
           unzip -o -d liquibase liquibase-4.10.0.zip
           export PATH=$PATH:$PWD/liquibase/
           echo $PATH
+          liquibase --version
           
       #    cd test1
       #    echo "changeLogFile=changelog.xml" >> liquibase.properties
