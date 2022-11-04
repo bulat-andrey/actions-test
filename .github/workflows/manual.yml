@@ -60,4 +60,4 @@ jobs:
       - name: Test ls  
         run: |
           ls
-        # liquibase --version
+          liquibase --version
