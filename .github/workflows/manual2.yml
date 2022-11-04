@@ -32,14 +32,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      - name: Liquibase prepare
+      - name: Liquibase run
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      -  run: curl ifcomfig.me
       -  uses: actions/checkout@v2
       -  uses: liquibase/liquibase-github-action@v7
          with:
             operation: 'update'
             classpath: 'example/changelogs'
             changeLogFile: 'samplechangelog.h2.sql'
-            username: ${{ secrets.USERNAME }}
-            password: ${{ secrets.PASSWORD }}
-            url: ${{ secrets.URL }}
+            username: admin1989
+            password: admin1989
+            url: jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul
