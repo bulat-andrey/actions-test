@@ -48,7 +48,7 @@ jobs:
           liquibase --version
           cd test1
           echo "changeLogFile=changelog.xml" >> liquibase.properties
-          liquibase --log-level=INFO --url="jdbc:postgresql://abul-contoso-cluster.cvbkjz3jakra.us-east-1.rds.amazonaws.com:5432/abul?user=admin1989&password=admin1989"  update
+          liquibase --log-level=INFO --url="jdbc:postgresql://host:port/db?user=user&password=passw"  update
         
     # Runs a single command using the runners shell
       - name: Send greeting
